@@ -52,9 +52,14 @@ replaced it with [mustache.js](http://github.com/janl/mustache.js).
 
 The next steps will be to add some keyboard shortcuts, for example I want
 `l` to go to the list of items, and `a` to go to the tab that allows me to
-add an item.
+add an item.  I'm not sure if I want to somehow pimp the form for entering
+a new item.
 
-I'm not sure if I want to add some reports at that point in time.
+I'm not sure if I want to add some reports at that point in time.  Maybe
+later.
+
+After implementing the functionality, perhaps I want to investigate the
+next library or framework.  Perhaps Riot?
 
 
 ## License
