@@ -59,5 +59,5 @@ I'm not sure if I want to add some reports at that point in time.
 
 ## License
 
-Copyright Kai Grossjohann by [MIT License](license).
+Copyright Kai Grossjohann by [MIT License](LICENSE).
 
