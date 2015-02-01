@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Worklog</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="worklog.css" media="screen" title="no title" charset="utf-8">
+</head>
+<body>
+    <h1>Worklog</h1>
+    <div role="tabpanel" id="mainapp">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#worklog" aria-controls="worklog" role="tab" data-toggle="tab">Worklog</a>
+            </li>
+            <li role="presentation">
+                <a href="#add" aria-controls="add" role="tab" data-toggle="tab">Add</a>
+            </li>
+            <li role="presentation">
+                <a href="#reports" aria-controls="reports" role="tab" data-toggle="tab">Reports</a>
+            </li>
+        </ul>
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="worklog">
+                <table id="worktable" class="table">
+                    <thead>
+                        <tr>
+                            <th>Date</th>
+                            <th>Start</th>
+                            <th>End</th>
+                            <th>Hours</th>
+                            <th>Project</th>
+                            <th>Comment</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="add">
+                <div class="panel panel-default">
+                    <form id="addform" action="#" method="get">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Field</th>
+                                    <th>Value</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <label for="formDate">Date</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="date" class="form-control" id="formDate" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="formStart">Start</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="time" name="formStart" value="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="formEnd">End</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="time" name="formEnd" value="" />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="formProject">Project</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" name="formProject" value="" placeholer="Project..." />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <label for="formComment">Comment</label>
+                                    </td>
+                                    <td>
+                                        <div class="form-group">
+                                            <input type="text" name="formComment" value="" placeholder="Comment..." />
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="form-group">
+                                            <button name="formSubmit" class="btn btn-primary" id="btnAdd">Save</button>
+                                        </div>
+                                    </td>
+                                    <td>
+                                        
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="reports">
+                <p>Reports Placeholder</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
