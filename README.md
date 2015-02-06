@@ -25,7 +25,7 @@ then had a directory called
 ~/git/worklog/Atom.app/Contents/Resources
 ```
 
-I then made it so that my local git repo is called `app`.  Because the 
+I then made it so that my local git repo is called `app`.  Because the
 file you're looking at now is called `README.md`, this means that this file
 has the name
 
@@ -61,8 +61,25 @@ later.
 After implementing the functionality, perhaps I want to investigate the
 next library or framework.  Perhaps Riot?
 
+## 2015-02-06
+
+I've added keyboard shortcuts `w`, `a`, `r` for the tabs "Worklog", "Add",
+"Reports".  Hitting `a` also automatically focuses the date input field.
+
+My first attempt at this was using the npm module `ks`, but that resulted in
+weird things happening to the tabs.  So now I've tried (the npm module)
+`keyboard.js` which mostly does what I want.  BUt `ks` automatically exempts
+input fields from the shortcuts, and with `keyboard.js` I have to do that
+myself.  Though a nice snippet is provided in the documentation, and that works
+as advertised.
+
+As of now, the app is still small enough so it's easy to understand.  But I can
+tell that there is no real structure to it.  Now I wonder whether I should go
+with [Polymer](https://www.polymer-project.org) or whether I should look at
+[React.js](http://facebook.github.io/react/).  The former seems to be object
+oriented, the latter seems to be functional.  Hm.
+
 
 ## License
 
 Copyright Kai Grossjohann by [MIT License](LICENSE).
-
