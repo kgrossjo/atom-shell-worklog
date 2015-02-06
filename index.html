@@ -11,15 +11,15 @@
 <body>
     <h1>Worklog</h1>
     <div role="tabpanel" id="mainapp">
-        <ul class="nav nav-tabs" role="tablist">
+        <ul class="nav nav-tabs" role="tablist" id="main-nav">
             <li role="presentation" class="active">
-                <a href="#worklog" aria-controls="worklog" role="tab" data-toggle="tab">Worklog</a>
+                <a href="#worklog" aria-controls="worklog" role="tab" data-toggle="tab" class="tab-worklog">Worklog</a>
             </li>
             <li role="presentation">
-                <a href="#add" aria-controls="add" role="tab" data-toggle="tab">Add</a>
+                <a href="#add" aria-controls="add" role="tab" data-toggle="tab" class="tab-add">Add</a>
             </li>
             <li role="presentation">
-                <a href="#reports" aria-controls="reports" role="tab" data-toggle="tab">Reports</a>
+                <a href="#reports" aria-controls="reports" role="tab" data-toggle="tab" class="tab-reports">Reports</a>
             </li>
         </ul>
         <div class="tab-content">
@@ -56,7 +56,7 @@
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="date" class="form-control" id="formDate" />
+                                            <input type="date" class="form-control addform-date" id="formDate">
                                         </div>
                                     </td>
                                 </tr>
@@ -66,7 +66,7 @@
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="time" name="formStart" value="" />
+                                            <input type="time" name="formStart" value="" >
                                         </div>
                                     </td>
                                 </tr>
@@ -76,7 +76,7 @@
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="time" name="formEnd" value="" />
+                                            <input type="time" name="formEnd" value="" >
                                         </div>
                                     </td>
                                 </tr>
@@ -86,7 +86,7 @@
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="text" name="formProject" value="" placeholer="Project..." />
+                                            <input type="text" name="formProject" value="" placeholer="Project..." >
                                         </div>
                                     </td>
                                 </tr>
@@ -96,7 +96,7 @@
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="text" name="formComment" value="" placeholder="Comment..." />
+                                            <input type="text" name="formComment" value="" placeholder="Comment..." >
                                         </div>
                                     </td>
                                 </tr>
@@ -107,7 +107,7 @@
                                         </div>
                                     </td>
                                     <td>
-                                        
+
                                     </td>
                                 </tr>
                             </tbody>

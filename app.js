@@ -3,6 +3,8 @@ var tide = require('tide');
 var jQuery = require('jquery');
 var $ = jQuery;
 var bootstrap = require('bootstrap');
+var keypress = require('keypress.js');
+var listener = new keypress.keypress.Listener();
 var backend = require('./backend.js');
 var Worklog = backend.Worklog;
 var WorkItem = backend.WorkItem;
@@ -23,6 +25,7 @@ function initializeApp() {
     populateWorklogTable();
     initializeForm();
     populateEmptyForm();
+    initializeKeybindings();
 }
 
 function populateWorklogTable() {
@@ -104,12 +107,34 @@ function addWorklogEntry(ev) {
         comment: rawComment,
     });
     WORKLOG.addItem(item);
-    
+
     populateWorklogTable();
     populateEmptyForm();
-    
+
     $('#mainapp a[href="#worklog"]').tab('show');
 
     ev.preventDefault();
     return false;
+}
+
+function initializeKeybindings() {
+    listener.simple_combo('w', keyWorklog);
+    listener.simple_combo('a', keyAddWorklogEntry);
+    listener.simple_combo('r', keyReports);
+    $('input[type=text]')
+        .bind("focus", function() { listener.stop_listening(); })
+        .bind("blur", function() { listener.listen(); });
+}
+
+function keyWorklog(ev) {
+    $('a.tab-worklog').tab('show');
+}
+
+function keyAddWorklogEntry(ev) {
+    $('a.tab-add').tab('show');
+    $('input.addform-date').focus();
+}
+
+function keyReports(ev) {
+    $('a.tab-reports').tab('show');
 }
