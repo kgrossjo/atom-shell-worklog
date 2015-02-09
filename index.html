@@ -16,7 +16,7 @@
                 <a href="#worklog" aria-controls="worklog" role="tab" data-toggle="tab" class="tab-worklog">Worklog</a>
             </li>
             <li role="presentation">
-                <a href="#add" aria-controls="add" role="tab" data-toggle="tab" class="tab-add">Add</a>
+                <a href="#item" aria-controls="item" role="tab" data-toggle="tab" class="tab-item">Item</a>
             </li>
             <li role="presentation">
                 <a href="#reports" aria-controls="reports" role="tab" data-toggle="tab" class="tab-reports">Reports</a>
@@ -24,24 +24,26 @@
         </ul>
         <div class="tab-content">
             <div role="tabpanel" class="tab-pane active" id="worklog">
-                <table id="worktable" class="table">
-                    <thead>
-                        <tr>
-                            <th>Date</th>
-                            <th>Start</th>
-                            <th>End</th>
-                            <th>Hours</th>
-                            <th>Project</th>
-                            <th>Comment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+                <div class="worklog-scrollable">
+                    <table id="worktable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Start</th>
+                                <th>End</th>
+                                <th>Hours</th>
+                                <th>Project</th>
+                                <th>Comment</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
             </div>
-            <div role="tabpanel" class="tab-pane" id="add">
+            <div role="tabpanel" class="tab-pane" id="item">
                 <div class="panel panel-default">
-                    <form id="addform" action="#" method="get">
+                    <form id="itemform" action="#" method="get">
                         <table class="table">
                             <thead>
                                 <tr>
@@ -56,7 +58,7 @@
                                     </td>
                                     <td>
                                         <div class="form-group">
-                                            <input type="date" class="form-control addform-date" id="formDate">
+                                            <input type="date" class="form-control itemform-date" id="formDate">
                                         </div>
                                     </td>
                                 </tr>
@@ -103,7 +105,7 @@
                                 <tr>
                                     <td>
                                         <div class="form-group">
-                                            <button name="formSubmit" class="btn btn-primary" id="btnAdd">Save</button>
+                                            <button name="formButton" class="btn btn-primary" id="btnSave">Save</button>
                                         </div>
                                     </td>
                                     <td>

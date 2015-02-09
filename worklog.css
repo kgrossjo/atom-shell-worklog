@@ -3,3 +3,21 @@ body
     margin-left: 1em;
     margin-right: 1em;
 }
+
+.worklog-scrollable
+{
+    position: relative;
+    max-height: 450px;
+    overflow: scroll;
+}
+
+tr.worklog
+{
+    border-left-width: 2px;
+    border-left-color: white;
+    border-left-style: solid;
+}
+tr.worklog.active
+{
+    border-left-color: blue;
+}
