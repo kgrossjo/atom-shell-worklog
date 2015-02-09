@@ -79,6 +79,22 @@ with [Polymer](https://www.polymer-project.org) or whether I should look at
 [React.js](http://facebook.github.io/react/).  The former seems to be object
 oriented, the latter seems to be functional.  Hm.
 
+## 2015-02-09
+
+I've added editing support to the app.  You can move focus in the Worklog tab
+with j/k, you can edit the current entry with e.  This is all done manually,
+without any of the libraries and frameworks I wanted to use.
+
+I had tried to use react with jsnox, but that turned out to be pretty difficult.
+Is it just me or is the documentation really lacking?  I think jsnox assumes
+that you already know react, but I don't.  And the react docs assume you use
+jsx, which I don't.  The react tutorial at some point stops to show the
+equivalent non-jsx code, so I even couldn't start with that.  Was I trying to do
+too much at once?
+
+Anyway, having an app that I can actually use is also nice.  I think I will want
+to add a report to it that summarizes my working hours for the week for easy
+entry in the time tracking tool at work.
 
 ## License
 
